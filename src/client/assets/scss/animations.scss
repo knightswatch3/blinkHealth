@@ -1,0 +1,74 @@
+@import "~animate.css";
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+.animationing {
+    -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+
+  &.very-short-delay {
+    -webkit-animation-delay: 0.15s;
+    animation-delay: 0.15s;
+  }
+
+  &.short-delay {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+  }
+
+  &.long-delay {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+  }
+
+  &.very-long-delay {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+
+  &.super-long-delay {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+  }
+
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+
+  &.very-short {
+    -webkit-animation-duration: 0.15s;
+    animation-duration: 0.15s;
+  }
+  &.short {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+  }
+  &.long {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+  &.very-long {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+  &.super-long {
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+  }
+
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+}

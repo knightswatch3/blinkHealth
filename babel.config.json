@@ -1,0 +1,55 @@
+{
+    "presets" : ["@babel/preset-env","@babel/preset-react"],
+    "env" :{
+        "development":{
+            "plugins": [
+                [
+                    "module-resolver",{
+                      "root" : ["./"],
+                      "alias":{
+                       "Assets": "./src/client/assets",
+                       "Config": "./config",
+                       "reduxModules": "./src/client/client_modules/reduxModules",
+                       "analytics": "./src/client/client_modules/analytics",
+                       "clientUtil": "./src/client/client_modules/clientUtil",
+                       "containers": "./src/client/client_modules/containers",
+                       "graphComponents": "./src/client/client_modules/graphComponents",
+                       "mixins": "./src/client/client_modules/mixins",
+                       "transformers": "./src/client/client_modules/transformers",
+                       "uiComponents": "./src/client/client_modules/uiComponents"
+                      }
+                    } 
+                   ],
+                    "lodash"
+            ]
+        },
+        "production":{
+            "plugins": [
+                [
+                    "module-resolver",{
+                      "root" : ["./"],
+                      "alias":{
+                       "Assets": "./src/client/assets",
+                       "Config": "./config",
+                       "reduxModules": "./src/client/client_modules/reduxModules",
+                       "analytics": "./src/client/client_modules/analytics",
+                       "clientUtil": "./src/client/client_modules/clientUtil",
+                       "containers": "./src/client/client_modules/containers",
+                       "graphComponents": "./src/client/client_modules/graphComponents",
+                       "mixins": "./src/client/client_modules/mixins",
+                       "transformers": "./src/client/client_modules/transformers",
+                       "uiComponents": "./src/client/client_modules/uiComponents"
+                      }
+                    }, 
+                    "transform-remove-console"
+                   ],
+                "lodash"
+            ]
+        },
+        "test":{
+            "presets":["@babel/preset-env","@babel/preset-react"],
+            "plugins": ["lodash","transform-remove-console"],
+            "sourceMap": "inline"
+        }
+    }
+}
