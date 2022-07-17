@@ -39,3 +39,4 @@ NOTE: Installation requirements:
 > 1. Node version used : v14.0.0
 > 2. NPM Version used:  v6.14.4
 > 3. Because the application is coded in Class models, react router integration was not easy, so I had to create a wrapper in the redux connector for the passed in component. 
+> 4. Due to time constraints there are certain components which I haven't simplified/improved-to-utilize to reusable component. Excample: Topbar. Loading component which I haven't incorporated as a HOC component for all rendered components. 
